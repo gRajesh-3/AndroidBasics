@@ -49,3 +49,11 @@
 
 5. [Content_Provider](https://www.youtube.com/watch?v=IVHZpTyVOxU)  
     a. When we use any app, it is going to store some data which only be accessed within the app. Other apps wont access but with content providers we can get access to other apps data and we can give access to our app's data through content uri. Example: Loading all images, contact list etc.. from other apps.
+
+6. [Intent_&_Intent_Filters](https://www.youtube.com/watch?v=2hIY1xuImuQ)    
+    a. Intent: request an action from other app components[activity, service]  
+    b. Explicit Intent: Here we explicitly mention which component should be launched
+    c. Implicit Intent: Here we mention the what we want [eg want to share a image], and android s/m takes care of finding the apps which can open image with. It will give us the chooser where we can choose a app to share image
+    d. Intent filter: Let's say we are chrome. We searched an image and want to share it. By clicking on it, android popups the chooser, where it'll all the apps which can load image. If we want to register our app also to accept image, we can go for intent filter.
+
+    Example: Lets say pdf viewer app. When it is opened, it will load all the pdf files in the app with the help of content provider. Lets say we download a pdf file in whatsapp. While opening, it will ask for app to open in whatsapp. To make sure the pdf viewer is shown in the chooser, we can register the app in the intent-filter[Intent.ACTION_SEND]
