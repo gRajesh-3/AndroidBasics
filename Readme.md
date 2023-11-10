@@ -48,4 +48,4 @@
     c. We use broadcase receiver to receive data either from other app[not often] or system[often]. Example, checking user toggles internet connection, bluetooth, airplane mode etc..  
 
 5. [Content_Provider](https://www.youtube.com/watch?v=IVHZpTyVOxU)  
-    a. 
+    a. When we use any app, it is going to store some data which only be accessed within the app. Other apps wont access but with content providers we can get access to other apps data and we can give access to our app's data through content uri. Example: Loading all images, contact list etc.. from other apps.
