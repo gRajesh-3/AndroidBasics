@@ -6,28 +6,28 @@
       1.2.1 When we develop an app for the user, it must be tested, packaged, and published (build app). This can be simplified with Gradle, which is a build automation tool.
 
 2. Activity - Single Screen / Fragment - portion of activity:
-    2.1 Lifecycle:
-        2.1.1: onCreate: Called when it's first created. Set up the activity here (from layouts).
-        2.1.2: onStart: Called when it's visible to the user. Perform animation and UI updates here.
-        2.1.3: onResume: Called whenever the activity is in the foreground.
-        2.1.4: onPause: Called when the activity is no longer in the foreground. Save any important data here.
-        2.1.5: onStop: Called when it's not visible to the user. Release resources.
-        2.1.6: onDestroy: Called when the activity is destroyed.
+    2.1. Lifecycle:
+        2.1.1. onCreate: Called when it's first created. Set up the activity here (from layouts).
+        2.1.2. onStart: Called when it's visible to the user. Perform animation and UI updates here.
+        2.1.3. onResume: Called whenever the activity is in the foreground.
+        2.1.4. onPause: Called when the activity is no longer in the foreground. Save any important data here.
+        2.1.5. onStop: Called when it's not visible to the user. Release resources.
+        2.1.6. onDestroy: Called when the activity is destroyed.
 
     2.2 State Changes:
-        2.2.1: Configuration changes:
+        2.2.1. Configuration changes:
             a. Whenever orientation changes in the app, the original activity will be destroyed, and a new instance of the activity will be created.
             b. [onPause -> onStop -> onSaveInstanceState -> onDestroy = original]
             c. [onCreate -> onStart -> onRestoreInstanceState -> onResume = new]
             d. While restoring, views with ID will preserve their state. If you want to save additional data, use onSaveInstanceState, Shared Preferences, View Model, Room DB.
 
-        2.2.2: User Taps Back Button: 
+        2.2.2. User Taps Back Button: 
             When the user is pressing the back button, they are not intended to go back to that activity. So in that case, onSaveInstanceState won't be called.
 
-        2.2.3: Activity/Dialog partially covers the current activity. onPause and onResume.
-        2.2.4: Activity/Dialog completely covers the current activity. onPause -> onStop and onRestart -> onStart -> onResume.
-        2.2.5: System kills the process
-        2.2.6: [Task_&_BackStack](https://www.youtube.com/watch?v=Z0AzoFOiH9c)
+        2.2.3. Activity/Dialog partially covers the current activity. onPause and onResume.
+        2.2.4. Activity/Dialog completely covers the current activity. onPause -> onStop and onRestart -> onStart -> onResume.
+        2.2.5. System kills the process
+        2.2.6. [Task_&_BackStack](https://www.youtube.com/watch?v=Z0AzoFOiH9c)
             a. Assume the browser app is opened on a phone. The browser home screen will be pushed to a stack called the back stack. When clicking on a bookmark, the bookmark screen will be pushed to the back stack and will be visible to the user by moving the previous screen to the background. When clicking on the back button, the current screen will be popped, and the previous screen comes to the foreground.
             b. Grouping similar screens/activities is called a task. E.g., Browser task (home, bookmark, and search) Instagram task (home, reels, profile).
             c. Launch modes: Tell what should be done when a new activity is pushed onto the back stack.
