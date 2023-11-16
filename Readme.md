@@ -57,3 +57,24 @@
     d. Intent filter: Let's say we are chrome. We searched an image and want to share it. By clicking on it, android popups the chooser, where it'll all the apps which can load image. If we want to register our app also to accept image, we can go for intent filter.
 
     Example: Lets say pdf viewer app. When it is opened, it will load all the pdf files in the app with the help of content provider. Lets say we download a pdf file in whatsapp. While opening, it will ask for app to open in whatsapp. To make sure the pdf viewer is shown in the chooser, we can register the app in the intent-filter[Intent.ACTION_SEND]
+
+7. Views and ViewGroup
+    a. Views are building blocks of UI ~ Button, TextView  
+    b. ViewGroup are container which groups the views  
+    c. Linear Layout: Arranges all the Views either horizontally or vertically // check example in AS
+    d. Constraint Layout: All the views will be arranged by the constraint that we set. // Most preferred
+
+8. [Recycler_View](https://medium.com/@mutebibrian256/android-recyclerview-in-kotlin-4b7fc646da4c)
+    a. Item: Represents each row in the recycler view
+    b. model: structure of the data used in the recycler view
+    c. adaptor: holds the implentation methods of the recycler view
+    d. view holder: reference to the each item in the reycler view
+
+    **NOTE** Read about different layout manager
+
+9. [ViewPager](https://www.youtube.com/watch?v=-wB_JE_PRTo)
+    a. ViewPager is a widget in Android used to create swipeable screens.
+
+10. [Spinner](https://www.youtube.com/watch?v=ovGZYK9bq2o)
+
+[RxJava](https://medium.com/@myofficework000/why-how-rxjava-for-android-5bda790ff730)
